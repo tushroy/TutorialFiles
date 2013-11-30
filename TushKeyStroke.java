@@ -14,27 +14,27 @@ public class TushKeyStroke extends Robot {
 
 	public static void main(String[] args) throws AWTException {
 		String programeName = "notepad";
-		String Text1 = "hello, how are you...";
+		String Text1 = "Hello, how are you...";
 		
-		TushKeyStroke r = new TushKeyStroke();
-		r.keyPress(KeyEvent.VK_CONTROL);
-		r.keyPress(KeyEvent.VK_ESCAPE);
-		r.keyRelease(KeyEvent.VK_CONTROL);
-		r.keyRelease(KeyEvent.VK_ESCAPE);
-		r.someDelay();
+		TushKeyStroke tush = new TushKeyStroke();
+		tush.keyPress(KeyEvent.VK_CONTROL);
+		tush.keyPress(KeyEvent.VK_ESCAPE);
+		tush.keyRelease(KeyEvent.VK_CONTROL);
+		tush.keyRelease(KeyEvent.VK_ESCAPE);
+		tush.someDelay();
 
 		for (int n = 0; n < programeName.length(); n++) {
-			r.keyPress(KeyEvent.getExtendedKeyCodeForChar(programeName
+			tush.keyPress(KeyEvent.getExtendedKeyCodeForChar(programeName
 					.charAt(n)));
-			r.someDelay();
+			tush.someDelay();
 		}
 
-		r.keyPress(KeyEvent.VK_ENTER);
-		r.someDelay();
+		tush.keyPress(KeyEvent.VK_ENTER);
+		tush.someDelay();
 		
 		for (int n = 0; n < Text1.length(); n++) {
-			r.keyPress(KeyEvent.getExtendedKeyCodeForChar(Text1.charAt(n)));
-			r.someDelay();
+			tush.keyPress(KeyEvent.getExtendedKeyCodeForChar(Text1.charAt(n)));
+			tush.someDelay();
 		}
 		
 		System.exit(0); // safe return
