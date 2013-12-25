@@ -7,7 +7,7 @@ public class Calcpi {
             y = Math.random();
             if (x * x + y * y <= 1){
             	insideCircle++;
-            	System.out.print("Percent "+Math.round((100.0*i)/total)+"\r");
+            	System.out.print("Calculating pi "+Math.round((100.0*i)/total)+"%\r");
             }
         }
         System.out.println("\n"+(4.0 * insideCircle / total)+" as i calculated");
